@@ -8,11 +8,9 @@ from simplemooc.accounts import views
 # set_trace()
 urlpatterns = [
     url(r'^$', views.dashboard, name='dashboard'),
-    # url(r'^$', 'simplemooc.accounts.views.dashboard', name='dashboard'),
     url(r'^entrar/$', login,
         {'template_name': 'accounts/login.html'}, name='login'),
-    # url(r'^sair/$', home, name='logout'),
     url(r'^sair/$', logout, {'next_page': 'core:home'}, name='logout'),
     url(r'^cadastre-se/$', views.register, name='register'),
-    url(r'^editar/$', views.edit, name='editar'),
+    url(r'^editar/$', views.editar, name='editar'),
 ]

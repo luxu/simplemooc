@@ -16,8 +16,8 @@ def dashboard(request):
 
 
 @login_required
-def edit(request):
-    template_name = 'accounts/edit.html'
+def editar(request):
+    template_name = 'accounts/editar.html'
     return render(request, template_name)
 
 
