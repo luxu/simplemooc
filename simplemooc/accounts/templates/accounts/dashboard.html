@@ -16,13 +16,15 @@
                 <li><a href="#">Curso 1</a></li>
                 <li><a href="#">Curso 2</a></li>
                 <li class="pure-menu-heading">Minha Conta</li>
-                <li><a href="{% url 'accounts:editar' %}">Editar Conta</a></li>
+                <li><a href="{% url 'accounts:edit' %}">Editar Conta</a></li>
+                <li><a href="{% url 'accounts:edit_password' %}">Editar Senha</a></li>
             </ul>
         </div>
     </div>
     <div class="pure-u-2-3">
         <div class="inner">
             {% block dashboard_content %}
+            <p><strong>ID</strong>: {{ user.id }}</p>
             <p><strong>Usuário</strong>: {{ user }}</p>
             <p><strong>E-mail</strong>: {{ user.email }}</p>
             {% endblock %}
