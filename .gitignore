@@ -2,3 +2,4 @@ venv
 sm.*
 .DS_Store
 simplemooc/__pycache__
+db.sqlite3
