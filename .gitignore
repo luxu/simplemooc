@@ -2,4 +2,8 @@ venv
 sm.*
 .DS_Store
 simplemooc/__pycache__
-db.sqlite3
+*.sqlite*
+simplemooc/accounts/migrations
+simplemooc/courses/migrations
+*__pycache__
+.idea

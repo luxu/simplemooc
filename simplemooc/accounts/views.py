@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm, SetPasswordForm
 # from django.conf import settings
-# from pdb import set_trace
+from pdb import set_trace
 
 from simplemooc.core.utils import generate_hash_key
 
@@ -18,7 +18,6 @@ User = get_user_model()
 @login_required
 def dashboard(request):
     template_name = 'accounts/dashboard.html'
-    # set_trace()
     return render(request, template_name)
 
 
@@ -50,7 +49,8 @@ def password_reset(request):
 
 
 def password_reset_confirm(request, key):
-    template_name = 'accounts/password_reset_confirm'
+    template_name = 'accounts/password_reset_confirm.html'
+    # set_trace()
     context = {}
     reset = get_object_or_404(PasswordReset, key=key)
     form = SetPasswordForm(user=reset.user, data=request.POST or None)
@@ -94,3 +94,4 @@ def register(request):
         'form': form
     }
     return render(request, template_name, context)
+
