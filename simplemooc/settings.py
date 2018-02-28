@@ -28,7 +28,6 @@ ALLOWED_HOSTS = []
 # para descomentar quando usar no ALLOWED_HOSTS = pythonanywhere.com
 # ALLOWED_HOSTS = ['luxu.pythonanywhere.com']
 
-
 # Application definition
 
 INSTALLED_APPS = (

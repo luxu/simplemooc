@@ -5,7 +5,7 @@
     {{ course }}
 </li>
 <li>
-    <a href="#">
+    <a href="{% url 'courses:lessons' course.slug %}">
         <i class="fa fa-video-camera"></i>
         Aulas e Materiais
     </a>
@@ -17,7 +17,7 @@
     </a>
 </li>
 <li>
-    <a href="#">
+    <a href="{% url 'courses:announcements' course.slug %}">
         <i class="fa fa-envelope"></i>
         Anúncios
     </a>
